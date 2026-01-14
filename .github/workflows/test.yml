@@ -21,4 +21,7 @@ jobs:
          aws-region: us-east-1
       - name: Verify AWS credentials
         run: aws sts get-caller-identity
-
+      - name: login to Amazon ECR
+        run: |
+          IMAGE_URI=323890959625.dkr.ecr.us-east-1.amazonaws.com/tms
+          docker login --username AWS --password-stdin 323890959625.dkr.ecr.us-east-1.amazonaws.com/tms
