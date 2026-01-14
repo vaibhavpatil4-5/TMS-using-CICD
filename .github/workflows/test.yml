@@ -1,0 +1,23 @@
+name: Test CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print working directory
+        run: pwd
+
+      - name: List repository files
+        run: ls -la
+
+      - name: Echo success message
+        run: echo "🎉 GitHub Actions is working!"
