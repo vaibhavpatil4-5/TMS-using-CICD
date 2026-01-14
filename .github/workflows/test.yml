@@ -1,4 +1,4 @@
-name: Tourism Management System CI
+name: Tourism Management System CICD
 
 on:
   push:
