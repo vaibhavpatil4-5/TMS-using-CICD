@@ -24,4 +24,13 @@ jobs:
         run: |
           aws ecr get-login-password --region us-east-1 | \
           docker login --username AWS --password-stdin 323890959625.dkr.ecr.us-east-1.amazonaws.com/tms
+      - name:  image pull from docker hub
+        run: |
+          docker pull vaibhavpatil45/tms-nginx:1.0
+      - name: Tag image for ECR
+        run: |
+          docker tag vaibhavpatil45/tms-nginx:1.0 323890959625.dkr.ecr.us-east-1.amazonaws.com/tms:latest
+      - name: Push image to ECR
+        run: |
+          docker push 323890959625.dkr.ecr.us-east-1.amazonaws.com/tms:latest
           
