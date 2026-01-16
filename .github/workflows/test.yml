@@ -37,7 +37,7 @@ jobs:
   Deploy-to-EKS:
     runs-on: ubuntu-latest
     needs: build
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -61,3 +61,4 @@ jobs:
       -  name: apply k8s manifests
         run: |
           kubectl apply -f k8s-manifests/  --validate=false
+
