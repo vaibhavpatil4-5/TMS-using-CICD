@@ -58,7 +58,7 @@ jobs:
       - name: test kubectl 
         run: |
           kubectl get nodes
-      -  name: apply k8s manifests
+      - name: apply k8s manifests
         run: |
           kubectl apply -f k8s-manifests/  --validate=false
 
