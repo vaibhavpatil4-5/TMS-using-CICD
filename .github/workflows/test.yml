@@ -48,7 +48,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: setup kubectl
-        uses: aws-actions/setup-kubectl@v2
+        uses: azure/setup-kubectl@v4
         with:
           version: 'latest'
 
