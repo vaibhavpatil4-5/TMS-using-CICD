@@ -60,5 +60,6 @@ jobs:
           kubectl get nodes
       - name: apply k8s manifests
         run: |
+          kubectl create namespace tms || echo "namespace tms already exists"
           kubectl apply -f k8s-manifests/  --validate=false
 
